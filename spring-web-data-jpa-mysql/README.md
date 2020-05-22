@@ -23,9 +23,16 @@ Se debe contar con cualquier aplicación/herramient de Testing de API REST. En e
 
 URL ejemplos:
     http://localhost:8080/pokedex-lite/pokemon/1 | GET
+
+
     http://localhost:8080/pokedex-lite/pokemon?name=Bulbasaur | GET
+
+
     http://localhost:8080/pokedex-lite/pokemons
+
+
     http://localhost:8080/pokedex-lite/pokemon | POST
+
         body:
                 {
                     "name": "Pikachu",
@@ -34,7 +41,10 @@ URL ejemplos:
                     ],
                     "levelIsFound": 10
                 }
+
+
     http://localhost:8080/pokedex-lite/pokemon/8 | PUT
+
         body:
                 {
                     "id": 8,
@@ -56,6 +66,8 @@ URL ejemplos:
                         }
                     ]
                 }                
+
+
     http://localhost:8080/pokedex-lite/pokemon/2 | DELETE
 
 
