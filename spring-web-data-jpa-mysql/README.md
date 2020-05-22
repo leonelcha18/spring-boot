@@ -1,4 +1,4 @@
-# API REST pokedex-lite
+# API REST de pokedex-lite
 
 
 # Tecnologías utilizadas:
