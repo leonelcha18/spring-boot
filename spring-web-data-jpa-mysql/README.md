@@ -22,6 +22,7 @@ Pre-requisitos: Apache Tomcat, MySQL y crear una base de datos llamada 'db_pokem
 Se debe contar con cualquier aplicación/herramient de Testing de API REST. En el proyecto en cuestión, se utilizó Postman.
 
 URL ejemplos:
+
     http://localhost:8080/pokedex-lite/pokemon/1 | GET
 
 
