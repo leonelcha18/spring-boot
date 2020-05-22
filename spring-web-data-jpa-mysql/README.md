@@ -73,5 +73,7 @@ URL ejemplos:
 
 
 Nota 1: El método POST, solo persiste los atributos name, types y levelIsFound
+
 Nota 2: El método PUT, solo actualiza los atributos name, types y levelIsFound
+
 Nota 3: El puerto puede variar, dependiendo la configuración del Apache Tomcat, pero por defecto es 8080
