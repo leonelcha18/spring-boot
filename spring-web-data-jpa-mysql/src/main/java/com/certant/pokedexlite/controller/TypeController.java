@@ -6,6 +6,7 @@ import com.certant.pokedexlite.dao.TypeDAO;
 import com.certant.pokedexlite.model.Type;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,13 +22,14 @@ public class TypeController {
      * @return 
      */
     @GetMapping("/types")
-    public List<Type> getAllPokemons() {
+    public ResponseEntity<List<Type>> getAllPokemons() {
         List<Type> types = typeDAO.findAll();
         
         types.forEach((tmpTp) -> {
             tmpTp.removePokemons();
+            tmpTp.removeEvolutions();
         });
         
-        return types;
+        return ResponseEntity.ok().body(types);
     }    
 }

@@ -50,7 +50,7 @@ public class PokemonController {
      * @return 
      */
     @PostMapping("/pokemon")
-    public PokemonWrapper createPokemon( @RequestBody PokemonWrapper pw) {
+    public ResponseEntity<PokemonWrapper> createPokemon( @RequestBody PokemonWrapper pw) {
         Pokemon tmpPk = new Pokemon(pw);
         Pokemon pk = parserUtil.parseTypes(pw, tmpPk);
         
@@ -63,7 +63,7 @@ public class PokemonController {
         
         PokemonWrapper tmpPw = new PokemonWrapper(pk);
         
-        return tmpPw;
+        return ResponseEntity.ok().body(tmpPw);
     }
     
     /**
@@ -71,7 +71,7 @@ public class PokemonController {
      * @return 
      */
     @GetMapping("/pokemons")
-    public List<PokemonWrapper> getAllPokemons() {
+    public ResponseEntity<List<PokemonWrapper>> getAllPokemons() {
         List<Pokemon> pks = new ArrayList<>(pokemonDAO.findAll());    
         List<PokemonWrapper> pws = new ArrayList<>();
         
@@ -80,7 +80,7 @@ public class PokemonController {
             pws.add(pw);
         }
         
-        return pws;
+        return ResponseEntity.ok().body(pws);
     }
 
     /**
@@ -99,9 +99,9 @@ public class PokemonController {
         
         Pokemon pk = optionalPk.get();
         
-        PokemonWrapper wp = new PokemonWrapper(pk);
+        PokemonWrapper pw = new PokemonWrapper(pk);
         
-        return ResponseEntity.ok().body(wp);
+        return ResponseEntity.ok().body(pw);
     }
     
     /**
@@ -120,9 +120,9 @@ public class PokemonController {
         
         Pokemon pk = optionalPk.get();
         
-        PokemonWrapper wp = new PokemonWrapper(pk);
+        PokemonWrapper pw = new PokemonWrapper(pk);
         
-        return ResponseEntity.ok().body(wp);
+        return ResponseEntity.ok().body(pw);
     }    
     
     /**

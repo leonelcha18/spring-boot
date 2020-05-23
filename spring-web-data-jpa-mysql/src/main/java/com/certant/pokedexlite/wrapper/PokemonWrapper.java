@@ -16,7 +16,6 @@ public class PokemonWrapper {
     private Integer levelIsFound;
     private Object abilities;
     private List<EvolutionWrapper> evolutions = new ArrayList<>();
-    private SearchOption searchOption;
 
     public PokemonWrapper() {
     }
@@ -136,14 +135,6 @@ public class PokemonWrapper {
 
     public void setEvolutions(List<EvolutionWrapper> evolutions) {
         this.evolutions = evolutions;
-    }
-
-    public SearchOption getSearchOption() {
-        return searchOption;
-    }
-
-    public void setSearchOption(SearchOption searchOption) {
-        this.searchOption = searchOption;
     }
     
     @Override
