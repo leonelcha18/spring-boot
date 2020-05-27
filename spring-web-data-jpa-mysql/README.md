@@ -2,7 +2,6 @@
 
 
 # Tecnologías utilizadas:
-
 Spring Boot, Spring Web, Spring Data JPA, MySQL Driver
 
 Testing: Postman
